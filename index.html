@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Attendly — Attendance Demo</title>
+<link rel="stylesheet" href="styles.css"></head>
+<body>
+<div class="app"><aside class="sidebar"><div class="brand"><span class="logo">✳</span>Attend<span class="purple">ly</span></div><small class="section-label">WORKSPACE</small><a class="active" href="#dashboard">▦ &nbsp; Overview</a><a href="#register">▤ &nbsp; Attendance</a><div class="profile">● &nbsp; Demo Teacher<small>Demo workspace</small></div></aside>
+<main><header><span>Workspace / Attendance</span><span class="mode">● Demo mode</span></header>
+<div class="heading" id="dashboard"><div><small>CLASSROOM MANAGEMENT</small><h1>Attendance overview<span class="purple">.</span></h1><p>Track your classroom attendance, simply and clearly.</p></div><span class="date-label" id="today"></span></div>
+<section class="stats"><div class="stat">Total students<strong id="total">0</strong><small>Enrolled in selected class</small></div><div class="stat">Present<strong id="present">0</strong><small>Marked present today</small></div><div class="stat">Absent<strong id="absent">0</strong><small>Marked absent today</small></div><div class="stat">Not marked<strong id="pending">0</strong><small>Awaiting attendance</small></div></section>
+<section class="panel" id="register"><div class="panel-header"><div><h2>Daily register</h2><p>Mark students present or absent for the selected date.</p></div><button id="export" class="outline">↓ Export CSV</button></div>
+<div class="filters"><label>Class<select id="class"><option value="8-A">Class 8 — A</option><option value="9-A">Class 9 — A</option><option value="10-A">Class 10 — A</option></select></label><label>Date<input id="date" type="date"></label><label class="search">Search student<input id="search" type="search" placeholder="Search by name or roll no."></label></div>
+<div class="table-container"><table><thead><tr><th>STUDENT</th><th>ROLL NO.</th><th>STATUS</th><th>MARK ATTENDANCE</th></tr></thead><tbody id="students"></tbody></table><p class="empty" id="empty" hidden>No students found.</p></div>
+<div class="panel-bottom"><span id="count"></span><div><button id="reset" class="plain">Reset day</button><button id="all" class="primary">✓ Mark all present</button></div></div></section><footer>Made for classroom demos · Data stays in this browser</footer></main></div><div id="toast" role="status" aria-live="polite"></div><script src="script.js" defer></script></body></html>
